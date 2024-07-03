@@ -1,0 +1,70 @@
+Imagine you're working on an e-commerce website. You have customer information stored in three separate dictionaries:
+
+customer_details: This dictionary contains basic information like name, email, and phone number.cart_items: This dictionary stores the items a customer has added to their cart, including product IDs and quantities.
+
+You need to combine these dictionaries to create a single profile for each customer that includes both their details and their cart information. This will allow you to display a more comprehensive view of each customer's activity on your website.
+
+Input Format:
+
+Give the Key and then Value for the Key.
+
+The first two lines are Dictionary 1
+
+The second two-line areDictionary 2
+
+The Third two-line areDictionary 3
+
+
+
+Output Format:
+
+Key and Value in the Updated Dictionary
+
+
+
+Sample Input:
+
+Enter entries for dic1:
+3
+2
+20
+3
+30
+4
+40
+Enter entries for dic2:
+2
+5
+50
+1
+10
+Enter entries for dic3:
+1
+6
+60
+Sample Output:
+
+Combined dictionary: {2: 20, 3: 30, 4: 40, 5: 50, 1: 10, 6: 60}
+
+Solution:
+
+n=int(input("Enter entries for dic1:\n"))
+d=dict()
+for i in range(0,n):
+    new_key=int(input())
+    new_value=int(input())
+    d[new_key]=new_value
+m=int(input("Enter entries for dic2:\n"))    
+d2=dict()
+for i in range(0,m):
+    new_key2=int(input())
+    new_value2=int(input())
+    d2[new_key2]=new_value2
+o=int(input("Enter entries for dic3:\n"))    
+d3=dict()
+for i in range(0,o):
+    new_key3=int(input())
+    new_value3=int(input())
+    d3[new_key3]=new_value3
+d4={**d,**d2,**d3}
+print("Combined dictionary:",d4)
