@@ -1,0 +1,46 @@
+Imagine you're managing a library's book catalog stored in a Python dictionary. Each book is represented by a key (unique identifier) and a value (dictionary containing book details like title, author, etc.). You need a way to efficiently check if a new book's ID (key) already exists in the catalog before adding it to avoid duplicates.
+
+Input Format:
+
+Give the Key and then Value for the Key.
+
+The first two lines represents the Key in the Dictionary.
+
+
+
+Output Format:
+
+Display given key already exists in a dictionary or not.
+
+
+Sample Input:
+
+3
+2
+20
+3
+30
+4
+40
+4
+
+Sample Output:
+
+Enter a key to Search:
+
+Key 4 is already present
+
+Solution:
+
+#Write your code here
+n=int(input())
+d=dict()
+for i in range(0,n):
+    new_key=int(input())
+    new_value=int(input())
+    d[new_key]=new_value
+k=int(input("Enter a key to search:"))
+if(k in d):
+    print("Key",k,"is already present")
+else:
+    print("Not Exist")
