@@ -1,0 +1,76 @@
+You and your friend love music and want to share some new songs. You both create sets containing the songs on your playlists. However, you might have some songs in common, and you also might have some unique discoveries.
+
+Input Format:
+
+The input will start with an integer n, the number of songs in your playlist.
+
+The next n lines will each contain the name of a song (a string).  
+
+The next line will contain an integer m, the number of songs in your friend's playlist.
+
+The following m lines will each contain the name of a song (a string).
+
+Output Format:
+
+The output will be two lists of songs:
+
+The first list contains the songs that are unique to your playlist.
+The second list contains the songs that are unique to your friend's playlist.
+Each list should be printed in lexicographical order, one song per line.
+Sample Input:
+
+5
+
+Song A
+
+Song B
+
+Song C
+
+Song D
+
+Song E
+
+4
+
+Song B
+
+Song E
+
+Song F
+
+Song G
+
+Sample Output:
+
+Song A
+
+Song C
+
+Song D
+
+Song F
+
+
+Song G
+
+Solution:
+
+n=int(input())
+ec1=set()
+for i in range (0,n):
+    nec=input()
+    ec1.add(nec)
+m=int(input())
+ec2=set()
+for i in range (0,m):
+    mec=input()
+    ec2.add(mec)
+sec5=ec1.difference(ec2)
+sec6=ec2.difference(ec1)
+sec7=sorted(sec5)
+sec8=sorted(sec6)
+for i in sec7:
+    print(i)
+for i in sec8:
+    print(i)
