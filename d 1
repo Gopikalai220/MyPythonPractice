@@ -1,0 +1,70 @@
+Imagine you're a librarian managing a book checkout system. You have a dictionary that stores book titles as keys and borrower names as values. You want to be able to efficiently display the books.
+
+Input Format:
+
+Give the Key and then Value for the Key, until user enter -1.
+
+The first line represents the key
+
+The second line represents the value
+
+For Example:
+
+1 = Key
+
+A= Value
+
+Output Format:
+
+Key and Value in the Ascending or Descending Order based on the User Decision.
+
+
+
+Sample Input:
+
+1
+
+A
+
+3
+
+C
+
+2
+
+B
+
+5
+
+E
+
+4
+
+D
+
+-1
+
+Sample Output:
+
+1 : A
+
+3 : C
+
+2 : B
+
+5 : E
+
+4 : D
+
+Solution:
+
+lst={}
+while(1):
+    key=int(input())
+    if(key!=-1):
+        val=input()
+        lst[key]=val
+    else:
+        break
+for i,j in lst.items():
+    print(i,":",j)
