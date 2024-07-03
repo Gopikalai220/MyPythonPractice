@@ -1,0 +1,84 @@
+You're a botanist studying different plant species. You have a master list of all the plant species in the region (represented as a set). You're also working on specific research projects, each focusing on a subset of plants from the master list. 
+
+Input Format:
+
+The input will start with an integer n, the number of plant species in the master list.
+
+The next n lines will each contain the name of a plant species (a string).
+
+The next line will contain an integer m, the number of research projects.
+
+For each research project, there will be:
+
+An integer k, the number of plant species in that research project.
+The next k lines will each contain the name of a plant species (a string).
+Output Format:
+
+For each research project, print the list of plant species that are part of the master list, one per line, in lexicographical order.
+
+Sample Input:
+
+7
+
+Oak
+
+Pine
+
+Maple
+
+Birch
+
+Spruce
+
+Cedar
+
+Fir
+
+2
+
+3
+
+Maple
+
+Cactus
+
+Fir
+
+2
+
+Pine
+
+
+Cedar
+
+Sample Output:
+
+Fir
+
+Maple
+
+Cedar
+
+
+Pine
+
+Solution:
+
+n=int(input())
+ps1=set()
+for i  in range (0,n):
+    nec=input()
+    ps1.add(nec)
+m=int(input())
+
+for i in range (0,m):
+    rp=set()  
+    mec=int(input())
+    for j in range (mec):
+        repla=input()
+        rp.add(repla)
+    li3=ps1&rp
+    li4=sorted(li3)
+    for i in li4:
+        print(i)
+
