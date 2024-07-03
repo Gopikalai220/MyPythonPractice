@@ -1,0 +1,72 @@
+You and your friend are both in college and need to choose elective courses. You both initially create sets containing the elective courses you're interested in. However, some courses might be common between your choices, and you want to identify the unique electives each of you is considering.
+
+Input Format:
+
+1)The input will start with an integer n, the number of elective courses the first student is interested in.
+
+2)The next n lines will each contain the name of a course (a string).
+
+3)The next line will contain an integer m, the number of elective courses the second student is interested in.
+
+4)The following m lines will each contain the name of a course (a string).
+
+Output Format:
+
+The output will be two lists of courses:
+
+   (i)The first list contains the unique courses the first student is interested in.
+
+    (ii)The second list contains the unique courses the second student is interested in.
+
+Each list should be printed in lexicographical order, one course per line.
+
+Sample Input:
+
+4
+
+Machine Learning
+
+Data Science
+
+Artificial Intelligence
+
+Robotics
+
+3
+
+Data Science
+
+Robotics
+
+
+Computer Vision
+
+Sample Output:
+
+Artificial Intelligence
+
+Machine Learning
+
+
+Computer Vision
+
+Solution:
+
+n=int(input())
+ec1=set()
+for i in range (0,n):
+    nec=input()
+    ec1.add(nec)
+m=int(input())
+ec2=set()
+for i in range (0,m):
+    mec=input()
+    ec2.add(mec)
+sec5=ec1.difference(ec2)
+sec6=ec2.difference(ec1)
+sec7=sorted(sec5)
+sec8=sorted(sec6)
+for i in sec7:
+    print(i)
+for i in sec8:
+    print(i)
