@@ -1,0 +1,37 @@
+Imagine you're a librarian managing a book checkout system. You have a dictionary that stores book titles as keys and borrower names as values. You have to add a new book details in the library and display the updated one.
+
+Note: use the predefined dictionary values as follows
+{'1': 'ABC', '2': 'BCD', '3': 'CDE'}
+
+Input Format:
+
+The first line represents the new key
+
+The second line represents the new value
+
+For Example:
+
+1 = Key
+
+A= Value
+
+Output Format:
+
+Key and Value in the Updated Dictionary
+
+Sample Input:
+
+1520
+Alphabet
+Sample Output:
+
+Updated dictionary: {'1': 'ABC', '2': 'BCD', '3': 'CDE', '1520': 'Alphabet'}
+
+Solution:
+
+#Write your code here
+d={'1': 'ABC', '2': 'BCD', '3': 'CDE'}
+new_key=input()
+new_value=input()
+d[new_key]=new_value
+print("Updated dictionary:",d)
